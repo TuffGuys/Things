@@ -1,7 +1,7 @@
 getgenv().BondFarmSetting = {
-    tweenDuration = 18, -- The lower it goes, the faster you teleport, Best is 15-18
-    AutoExecute = true,
-    CheckMissedBonds = true,
+    tweenDuration = 18,
+    AutoExecute = false,
+    CheckMissedBonds = false,
     WebhookUrl = "Paste_Your_WebhookURL_Here_If_You_Have"
 }
 
