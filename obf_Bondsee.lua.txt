@@ -1,10 +1,7 @@
 getgenv().BondFarmSetting = {
-    tweenDuration = 18,
-    AutoExecute = false,
-    CheckMissedBonds = false,
-    WebhookUrl = "Paste_Your_WebhookURL_Here_If_You_Have"
-}
+		tweenDuration = 20,
+		AutoExecute = false,
+		CheckMissedBonds = false -- doesn't really work
+	}
 
-EnabledScript = true
-SaveNewSettings = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DonjoScripts/Public-Scripts/refs/heads/Slap-Battles/Deadrails_Obfucasted_19839292790.lua"))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DonjoScripts/Public-Scripts/refs/heads/Slap-Battles/TheFastestBondStealer.lua'))()
