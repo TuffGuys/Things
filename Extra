@@ -1,9 +1,0 @@
-getgenv().BondFarmSetting = {
-    tweenDuration = 18,
-    AutoExecute = false,
-    CheckMissedBonds = false,
-}
-
-EnabledScript = true
-SaveNewSettings = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DonjoScripts/Public-Scripts/refs/heads/Slap-Battles/Deadrails_Obfucasted_19839292790.lua"))()
