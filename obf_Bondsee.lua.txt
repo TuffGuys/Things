@@ -1,7 +1,0 @@
-getgenv().BondFarmSetting = {
-		tweenDuration = 20,
-		AutoExecute = false,
-		CheckMissedBonds = false -- doesn't really work
-	}
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/DonjoScripts/Public-Scripts/refs/heads/Slap-Battles/TheFastestBondStealer.lua'))()
