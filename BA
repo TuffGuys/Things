@@ -1,9 +1,10 @@
--- just copy all, set (true/false) for toggle (on/off)
 getgenv().BondFarmSetting = {
-    AutoExecute = false,
-    CheckMissedBonds = false,
-    autoSHOPDelay = 30,
-    WalkOnly = true
+    tweenDuration = 18,               -- Lower value = faster teleport; optimal range: 18-30.
+    AutoExecute = false,                -- Best used with your executor's auto-execute feature.
+    CheckMissedBonds = false,   -- Enables checking for missed bonds.
+    WebhookUrl = "URL_HERE",   -- Notification webhook but slow down server hopping.
+    autoSHOPDelay = 30,              -- Delay before server hop (prevents getting stuck).
+    WalkOnly = true                      -- If false, teleports instantly to party maker; if true, walks normally to avoid bans.
 }
 script_key = "Key_59b7a430c3b8502b"
 SaveNewSettings = true
