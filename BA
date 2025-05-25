@@ -1,0 +1,10 @@
+-- just copy all, set (true/false) for toggle (on/off)
+getgenv().BondFarmSetting = {
+    AutoExecute = false,
+    CheckMissedBonds = false,
+    autoSHOPDelay = 30,
+    WalkOnly = true
+}
+script_key = "Key_59b7a430c3b8502b"
+SaveNewSettings = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DonjoScripts/Public-Scripts/refs/heads/Slap-Battles/Deadrails_Obfucasted_19839292790.lua"))()
