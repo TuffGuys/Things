@@ -1,0 +1,5 @@
+if game.PlaceId == 116495829188952 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Dead-rails/refs/heads/main/Auto-Bonds'))()
+else
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Qiwikox12/stubrawl/refs/heads/main/AutoFarmBonds.txt"))()
+end
